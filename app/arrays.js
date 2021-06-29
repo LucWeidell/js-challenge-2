@@ -144,7 +144,9 @@ function bandMemberDetails(name) {
         eleNameTwo = element.name.toLowerCase()
         eleNameTwo = eleNameTwo.substring(0, 1)
         name = name.substring(0,1);
-        console.log('name, eleName', name, eleNameTwo)
+        if(eleNameTwo == name){
+            return element;
+        }
     });
     return foundMem.name + ' is in the band and plays the ' + foundMem.instrument;
 }
