@@ -6,7 +6,12 @@
 // 1*2*3*4 = 24
 
 function factorials(num) {
-
+  let result= 1;
+  for(i=2; i<=num; i++){
+    result *= i;
+  }
+  // bad array.forEach(element => result *=element);
+  return result;
 }
 
 // ------------------------------------------
@@ -17,6 +22,11 @@ function factorials(num) {
 // output: 20
 
 function rangeTotal(n1, n2) {
+  let result = 0;
+  for(i=n1; i<=n2; i++){
+    result += i;
+  }
+  return result;
 
 }
 
@@ -24,11 +34,15 @@ function rangeTotal(n1, n2) {
 
 
 // 3. Write a function that will take in a starting number, ending number, and a divisor. Iterate
-// over the range of the numbers and rtuen how many numbers can be divided by the divisor.
+// over the range of the numbers and retuen how many numbers can be divided by the divisor.
 // Example:
 // input: 15, 20, 5
 // output: 2
 
 function rangeDivisor(start, end, divisor) {
-
+  let counter = 0;
+  for(i = start; i<=end; i++){
+    ((i % divisor) == 0) ? counter++: counter+=0;
+  }
+  return counter;
 }
