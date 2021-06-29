@@ -34,7 +34,6 @@ function sumEqualsTarget(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     //Nest to go over again
     for (let j = i+1; j < arr.length; j++) {
-      //console.log('Value and target', (arr[i] + arr[j]), target)
       if((arr[i] + arr[j]) == target){
         return true;
       }
@@ -62,13 +61,11 @@ function oddAscender(arr) {
      }
      arrOdd.push({index: i, val: ele})
    }
-   console.log('ODD NORM',arrOdd)
   arrOdd.sort(function(one, two){return one.val - two.val})
   let arrPlace = arrOdd.map(element => element.index)
   arrPlace.sort(function(one, two){return one - two})
   while(arrPlace.length > 0){
     arr.splice(arrPlace[0], 1, arrOdd[0].val)
-    console.log('FIXING KIT' ,arr);
     arrPlace.splice(0,1)
     arrOdd.splice(0,1)
   }
@@ -96,8 +93,6 @@ function oddAscender(arr) {
   //     arrOdd.splice(0,1);
   //   }
   //   arrEven.splice(0,1);
-  //   console.log('Even during fix', arrEven)
   // }
-  // console.log(result)
   // arr = result;
 }
