@@ -7,7 +7,6 @@ function rearranger(arr) {
     let mover = arr[0];
     arr.splice(0,1);
     arr.push(mover);
-    console.log(arr);
     return arr;
 }
 
@@ -139,7 +138,6 @@ let theBand = {
 
 function bandMemberDetails(name) {
     name = name.toLowerCase();
-    console.log('name:',name)
     let foundMem = theBand.members.find(element => {
         eleNameTwo = element.name.toLowerCase()
         eleNameTwo = eleNameTwo.substring(0, 1)
